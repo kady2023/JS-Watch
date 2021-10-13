@@ -15,7 +15,14 @@
 
     <title>JS Watch</title>
   </head>
-  <body style="background-image: url('time.jpg'); background-repeat: no-repeat; background-attachment: fixed; background-size: cover;">
+  <body
+    style="
+      background-image: url('time.jpg');
+      background-repeat: no-repeat;
+      background-attachment: fixed;
+      background-size: cover;
+    "
+  >
     <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
       <div class="container-fluid">
         <a class="navbar-brand" href="#">Navbar</a>
@@ -77,15 +84,218 @@
       </div>
     </nav>
 
-    <div class="container" style="min-height: 80vh;">
-      <div class="container my-4 d-flex justify-content-center" style="min-height: 50vh;">
+    <div class="container" style="min-height: 80vh">
+      <div
+        class="container my-4 d-flex justify-content-center"
+        style="min-height: 50vh"
+      >
         <div class="col-md-8 align-senter">
-          <div class="h-100 p-5 text-white bg-secondary rounded-3 bg-opacity-75">
+          <div
+            class="h-100 p-5 text-white bg-secondary rounded-3 bg-opacity-75"
+          >
             <h1>Current time Is: <span id="time"></span></h1>
-            <p>Swap the background-color utility and add a `.text-*` color utility to mix up the jumbotron look. Then, mix and match with additional component themes and more.</p>
+            <p>
+              Swap the background-color utility and add a `.text-*` color
+              utility to mix up the jumbotron look. Then, mix and match with
+              additional component themes and more.
+            </p>
             <hr class="my-4" />
             <p>We are here to show you the time for different countries</p>
-            <button class="btn btn-outline-light" type="button">Browse Time</button>
+            <a
+              class="btn btn-outline-light"
+              data-bs-toggle="collapse"
+              href="#collapseExample"
+              role="button"
+              aria-expanded="false"
+              aria-controls="collapseExample"
+            >
+              Browse Time
+            </a>
+            <div class="collapse" id="collapseExample">
+              <div class="card card-body bg-secondary bg-opacity-75">
+                <p class="d-flex justify-content-center">
+                  Click on the country to know its time.
+                </p>
+                
+                <button
+                  class="btn btn-light"
+                  type="button"
+                  data-bs-toggle="offcanvas"
+                  data-bs-target="#offcanvasBottomNY"
+                  aria-controls="offcanvasBottom"
+                >
+                  New York, USA
+                </button>
+                <hr class="my-2" />
+                <button
+                  class="btn btn-light"
+                  type="button"
+                  data-bs-toggle="offcanvas"
+                  data-bs-target="#offcanvasBottomLD"
+                  aria-controls="offcanvasBottom"
+                >
+                  London, UK
+                </button>
+                <hr class="my-2" />
+                <button
+                  class="btn btn-light"
+                  type="button"
+                  data-bs-toggle="offcanvas"
+                  data-bs-target="#offcanvasBottomTI"
+                  aria-controls="offcanvasBottom"
+                >
+                  Tehran, Iran
+                </button>
+                <hr class="my-2" />
+                <button
+                  class="btn btn-light"
+                  type="button"
+                  data-bs-toggle="offcanvas"
+                  data-bs-target="#offcanvasBottomDA"
+                  aria-controls="offcanvasBottom"
+                >
+                  Darwin, Australia
+                </button>
+                <hr class="my-2" />
+                <button
+                  class="btn btn-light"
+                  type="button"
+                  data-bs-toggle="offcanvas"
+                  data-bs-target="#offcanvasBottomYM"
+                  aria-controls="offcanvasBottom"
+                >
+                  Yangon, Mayanmar
+                </button>
+                <hr class="my-2" />
+              </div>
+            </div>
+<!-- ----------------------------------------------------------------- -->
+            <div
+                  class="offcanvas offcanvas-bottom bg-dark bg-opacity-25"
+                  tabindex="-1"
+                  id="offcanvasBottomNY"
+                  aria-labelledby="offcanvasBottomLabel"
+                >
+                  <div class="offcanvas-header">
+                    <h3 class="offcanvas-title" id="offcanvasBottomLabel">
+                      New York, United States of America
+                    </h3>
+                    <hr>
+                    <button
+                      type="button"
+                      class="btn-close text-reset"
+                      data-bs-dismiss="offcanvas"
+                      aria-label="Close"
+                    ></button>
+                  </div>
+                  <div class="offcanvas-body small">
+                    <h5>
+                      Current time at New York Is:  <span id="NYtime"></span>
+                    </h5>
+                  </div>
+                </div>
+<!-- ----------------------------------------------------------------- -->
+                <div
+                  class="offcanvas offcanvas-bottom bg-dark bg-opacity-25"
+                  tabindex="-1"
+                  id="offcanvasBottomLD"
+                  aria-labelledby="offcanvasBottomLabel"
+                >
+                  <div class="offcanvas-header">
+                    <h3 class="offcanvas-title" id="offcanvasBottomLabel">
+                      London, United Kingdom
+                    </h3>
+                    <hr>
+                    <button
+                      type="button"
+                      class="btn-close text-reset"
+                      data-bs-dismiss="offcanvas"
+                      aria-label="Close"
+                    ></button>
+                  </div>
+                  <div class="offcanvas-body small">
+                    <h5>
+                      Current time at London Is:  <span id="LDtime"></span>
+                    </h5>
+                  </div>
+                </div>
+<!-- ----------------------------------------------------------------- -->
+                <div
+                  class="offcanvas offcanvas-bottom bg-dark bg-opacity-25"
+                  tabindex="-1"
+                  id="offcanvasBottomTI"
+                  aria-labelledby="offcanvasBottomLabel"
+                >
+                  <div class="offcanvas-header">
+                    <h3 class="offcanvas-title" id="offcanvasBottomLabel">
+                      Tehran, Iran
+                    </h3>
+                    <hr>
+                    <button
+                      type="button"
+                      class="btn-close text-reset"
+                      data-bs-dismiss="offcanvas"
+                      aria-label="Close"
+                    ></button>
+                  </div>
+                  <div class="offcanvas-body small">
+                    <h5>
+                      Current time at Tehran Is:  <span id="TItime"></span>
+                    </h5>
+                  </div>
+                </div>
+<!-- ----------------------------------------------------------------- -->
+
+                <div
+                  class="offcanvas offcanvas-bottom bg-dark bg-opacity-25"
+                  tabindex="-1"
+                  id="offcanvasBottomDA"
+                  aria-labelledby="offcanvasBottomLabel"
+                >
+                  <div class="offcanvas-header">
+                    <h3 class="offcanvas-title" id="offcanvasBottomLabel">
+                      Darwin, Australia
+                    </h3>
+                    <hr>
+                    <button
+                      type="button"
+                      class="btn-close text-reset"
+                      data-bs-dismiss="offcanvas"
+                      aria-label="Close"
+                    ></button>
+                  </div>
+                  <div class="offcanvas-body small">
+                    <h5>
+                      Current time at Darwin Is:  <span id="DAtime"></span>
+                    </h5>
+                  </div>
+                </div>
+<!-- --------------------------------------------------------------------------- -->
+                <div
+                  class="offcanvas offcanvas-bottom bg-dark bg-opacity-25"
+                  tabindex="-1"
+                  id="offcanvasBottomYM"
+                  aria-labelledby="offcanvasBottomLabel"
+                >
+                  <div class="offcanvas-header">
+                    <h3 class="offcanvas-title" id="offcanvasBottomLabel">
+                      Yangon, Mayanmar
+                    </h3>
+                    <hr>
+                    <button
+                      type="button"
+                      class="btn-close text-reset"
+                      data-bs-dismiss="offcanvas"
+                      aria-label="Close"
+                    ></button>
+                  </div>
+                  <div class="offcanvas-body small">
+                    <h5>
+                      Current time at Yangon Is:  <span id="YMtime"></span>
+                    </h5>
+                  </div>
+                </div>
+<!-- ---------------------------------------------------------------------------------- -->               
           </div>
         </div>
       </div>
